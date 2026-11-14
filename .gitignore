@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.test-work/
+.venv/
+.env
+.env.*
+*.pdf
+*.epub
+*.zip
+*.partial
+manifest.json
+results/
+inputs/
