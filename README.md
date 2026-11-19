@@ -1,6 +1,18 @@
 # MinerU PDF Batch Skill
 
-A project-scoped agent skill and Python CLI for splitting local PDFs, converting them through MinerU's batch API, and keeping verified result archives. The original PDFs remain unchanged.
+A project-scoped Agent Skill and Python CLI for planning and splitting local PDFs, submitting them to MinerU’s cloud batch API, resuming jobs, and validating downloaded results. The original PDFs stay unchanged. Run `run --submit` only after authorizing upload to MinerU.
+
+## Workflow at a glance
+
+| Step | Command | What it does |
+|---|---|---|
+| Preview | `plan` | Show the page and file-size splits locally |
+| Prepare | `prepare` | Create local PDF parts and a resumable job manifest |
+| Submit | `run --submit` | Upload the prepared parts to MinerU after authorization |
+| Resume | `poll` | Check submitted jobs and collect available results |
+| Verify | `validate` | Check that all parts are verified and the archives and extracted files are intact |
+
+Evaluate OCR accuracy separately. For local use, install the dependencies from `requirements.txt` with Python 3.11+. Online conversion requires a MinerU API token.
 
 ## Use it
 
